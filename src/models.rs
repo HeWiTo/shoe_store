@@ -46,3 +46,14 @@ pub struct NewCompleteProduct {
     pub product: NewProduct,
     pub variants: Vec<NewVariantValue>
 }
+
+use serde::{Serialize, Deserialize};
+use diesel::Queryable;
+
+#[derive(Queryable, Debug, Serialize, Deserialize)]
+pub struct Product {
+    pub id: i32,
+    pub name: String,
+    pub cost: f64,
+    pub active: bool,
+}

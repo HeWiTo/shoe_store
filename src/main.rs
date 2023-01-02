@@ -1,3 +1,5 @@
+use ::shoe_store::list_products;
+
 fn main() {
-    println!("Hello, world!");
+    println!("The products are: {:#?}", list_products());
 }
